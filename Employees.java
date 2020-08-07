@@ -1,9 +1,9 @@
-public class Employee {
+public class Employees {
     private String fullName;
     private int salary;
     private int age;
 
-    Employee(String fullName, int salary, int age){
+    Employees(String fullName, int salary, int age){
         this.fullName = fullName;
         this.salary = salary;
         this.age = age;
@@ -23,5 +23,9 @@ public class Employee {
 
     public String getFullNameAgeInfo(){
         return getFullName() + " of age " + getAge() + " years old";
+    }
+
+    public void setSalary(int salary){
+        this.salary = salary;
     }
 }
