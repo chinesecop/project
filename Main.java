@@ -21,11 +21,11 @@ public class Main {
         fos2.flush();
         fos2.close();
 
-//Создаем поток-чтения-байт-из-файла MyFile
+// Create a stream to read bytes from a files (MyFile, MyFile2)
         FileInputStream fis = new FileInputStream(path1);
         FileInputStream fis2 = new FileInputStream(path2);
 
-// Создаем поток-записи-байт-в созданный файл MyFile3
+// Create a stream of writing bytes to the created file (MyFile3)
         String path3 = "C:\\Users\\79224\\Documents\\MyFile3.txt";
         FileOutputStream fos3 = new FileOutputStream(path3);
         rewrite(fis, fos3);
@@ -34,7 +34,7 @@ public class Main {
         fis.close();
         fis2.close();
         fos3.close();
-
+// word check
         String matcher = "abc";
         if (readUsingFiles(path3).contains(matcher))
             System.out.println("file contains: " + matcher);
@@ -44,7 +44,7 @@ public class Main {
 
     public static void rewrite(FileInputStream from, FileOutputStream in) throws IOException {
         byte[] buffer = new byte[1000];
-        while (from.available() > 0) //пока есть еще непрочитанные байты
+        while (from.available() > 0) // while there are still unread bytes
         {
             int count = from.read(buffer);
             in.write(buffer, 0, count);
