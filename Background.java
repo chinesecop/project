@@ -1,10 +1,7 @@
-import javax.swing.*;
-import java.awt.*;
+public class Background {
+    private GameCanvas component;
 
-public class Background extends JPanel {
-    private JFrame component;
-
-    public Background(JFrame component) {
+    public Background(GameCanvas component) {
         this.component = component;
     }
 
